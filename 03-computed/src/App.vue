@@ -1,19 +1,30 @@
 <script setup>
-import { nextTick, reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
 
-const book = reactive({
-  name: 'Book 1'
-  chapters: []
+const firstName = ref('Nguyen Xuan')
+const lastName = ref('D')
 
+const fullName = computed({
+  get(){
+    return firstName.value + ' ' + lastName.value
+  },
+  set(newValue){
+    [firstName.value, lastName.value] = newValue.split(',')
+  }
 })
+
+const changeFullname = () => {
+  fullName.value = 'Nguyen Van, B'
+}
 
 </script>
 
 <template>
   <div>
-    <p id="count">Book name: {{ book.name }}</p>
-    <p id="count">Da xuat ban: {{ book.chapters.length > 9 ? 'co' : 'khong' }}</p>
-
+    <p id="count">Full Name: {{ fullName }}</p>
+    <p id="count">First Name: {{ firstName }}</p>
+    <p id="count">Last Name: {{ lastName }}</p>
+    <button @click ="changeFullname">change Fullname</button>
   </div> 
 
 </template>

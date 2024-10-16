@@ -1,2 +1,2 @@
 # Vuejs
-This is Duc's Vuejs basic
+This is Duc's course about Vuejs basic 
