@@ -1,0 +1,28 @@
+{
+  "name": "13-componnents",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/eslint-config-prettier": "^10.0.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-vue": "^9.29.0",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.8",
+    "vite-plugin-vue-devtools": "^7.4.6"
+  },
+  "packageManager": "yarn@4.5.0+sha512.837566d24eec14ec0f5f1411adb544e892b3454255e61fdef8fd05f3429480102806bac7446bc9daff3896b01ae4b62d00096c7e989f1596f2af10b927532f39"
+}
