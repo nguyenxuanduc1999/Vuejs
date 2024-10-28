@@ -1,13 +1,13 @@
 <script setup>
 const props = defineProps({
-  greetingMessage: String,
+  count: Number,
   
   // message: {
   //   type: String,
   //   required: true
   // }
 });
-console.log(props.greetingMessage);
+console.log(props.count);
 
 // defineProps({
 //   msg: {
@@ -20,11 +20,12 @@ console.log(props.greetingMessage);
 <template>
   <div class="greetings">
     <h1 class="green">{{ greetingMessage }}</h1>
-    <h3>
+
+    <!-- <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+    </h3> -->
   </div>
 </template>
 

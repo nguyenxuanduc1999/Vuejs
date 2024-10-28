@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <p>{{ JSON.stringify(props) }}</p>
 </template>
 
@@ -13,6 +13,12 @@ const props = defineProps({
     propD: {
         type: Number,
         default: 100,
+    },
+    propE: {
+        type:Object,
+    }
+    propF:{
+        t
     }
 });
-</script>
+</script> -->

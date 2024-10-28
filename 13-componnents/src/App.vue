@@ -2,10 +2,16 @@
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import ButtonCount from './components/ButtonCount.vue';
-import ChildrenComponent from './components/ChildrenComponent.vue';
+import ButtonCount from './components/ButtonCount.vue'
+import componentVModel from './components/ComponentVmodel.vue'
+// import ChildrenComponent from './components/ChildrenComponent.vue';
 
-const message = ref("Hello!");
+const email = ref("");
+const count = ref(0);
+
+const increaseBy = (number) => {
+  count.value = count.value + number;
+}
 
 </script>
 
@@ -14,9 +20,15 @@ const message = ref("Hello!");
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld :greetingMessage="message + 'world'" />
-      <ButtonCount :init="5" />
-      <ChildrenComponent
+      <component-v-model v-model="email"/>
+      <HelloWorld :count="count" />
+      <ButtonCount 
+        @increase="count++" 
+        @increaseByTwoTimes="count = count +2"
+        @increaseBy="increaseBy"  
+      />
+      <ComponentA />
+      <!-- <ChildrenComponent
         :propA="12"
         propB="2"
         propC="Hello"
@@ -24,7 +36,7 @@ const message = ref("Hello!");
         :propE="{
           message:'Hello',
         }"
-      />
+      /> -->
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
